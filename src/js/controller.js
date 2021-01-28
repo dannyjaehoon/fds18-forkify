@@ -132,7 +132,6 @@ const addRecipeHandler = async e => {
   const recipe = Recipe.newRecipe();
 
   if(!Recipe.isValided()) return;
-  console.dir('controller.js 135' + recipe);
   const newRecipe = await Recipe.sendNewRecipe(recipe);
   if(!newRecipe) return;
   Bookmark.addBookmark(newRecipe);

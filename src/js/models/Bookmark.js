@@ -17,7 +17,7 @@ class Bookmark {
         return this._state.bookmarkList;
     }
 
-    removeBookmark = () => {
+    removeBookmark() {
         this._state.bookmarkList.pop();
         localStorage.setItem('bookmarkList', JSON.stringify(this._state.bookmarkList));
     }
